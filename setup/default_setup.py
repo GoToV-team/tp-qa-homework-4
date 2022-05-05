@@ -1,4 +1,5 @@
 import os
+from numpy import kron
 from selenium.webdriver import DesiredCapabilities, Remote
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
@@ -18,4 +19,4 @@ def default_setup(t):
     else:
         t.driver = webdriver.Firefox(service=Service(executable_path=GeckoDriverManager().install()))
 
-    # setup_auth(t)
+    setup_auth(t)
